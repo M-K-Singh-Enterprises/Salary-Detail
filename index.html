@@ -22,22 +22,19 @@
     <div class="container">
         <header>
             <h1>M.K SINGH ENTERPRISES</h1>
-            <p>Live view of our latest analytics and records</p>
+            <p>Live view of our latest payment details and records</p>
         </header>
-
-        <div class="hiring-banner">
-            <span class="pulse-icon">📍</span>
-            <!--<p><strong>We Are Hiring!</strong> We are currently looking for <strong>CNC Operators</strong> and
-                <strong>Helpers</strong> in <strong>Baddi</strong> and <strong>Parwanoo</strong>. Contact us to apply.
-            </p>-->
-        </div>
 
         <main>
             <div class="iframe-wrapper">
-                <!-- A placeholder loading state could go here, but the iframe itself loads the sheet directly -->
+                <div class="loader-container" id="loader">
+                    <div class="spinner"></div>
+                    <p>Loading Data...</p>
+                </div>
                 <iframe
                     src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSzDho6DeM-wyW6RlX_BaKWdbd1Zqp4oLApPR7HqfwSv-0W2mHUcFwmzJPclKhQp092n4gOPljmCU-4/pubhtml?widget=true&amp;headers=false"
-                    title="Google Sheets Embedded Data" allowfullscreen>
+                    title="Google Sheets Embedded Data" allowfullscreen
+                    onload="document.getElementById('loader').style.display='none';">
                 </iframe>
             </div>
 
